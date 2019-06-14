@@ -26,19 +26,19 @@ export const PaymentcomplianceControllerBackEnd = ClientFactory(Paymentcomplianc
  */
 export async function InitServerIdentity() {
     await initAdapter;
-    const res = await PaymentcomplianceControllerBackEnd.get(identityId);
-    try {
-        const serverIdentity = new Paymentcompliance(res).toJSON();
+    // const res = await PaymentcomplianceControllerBackEnd.get(identityId);
+    // try {
+    //     const serverIdentity = new Paymentcompliance(res).toJSON();
 
-        if (!serverIdentity || !serverIdentity.id) {
-            throw new Error('Server identity does not exists, make sure to enroll it or seed data');
-        } else {
-            console.log('Server identity exists');
-        }
-    } catch (ex) {
-        console.log(JSON.stringify(ex));
-        throw new Error('Server identity does not exists, make sure to enroll it or seed data');
-    }
+    //     if (!serverIdentity || !serverIdentity.id) {
+    //         throw new Error('Server identity does not exists, make sure to enroll it or seed data');
+    //     } else {
+    //         console.log('Server identity exists');
+    //     }
+    // } catch (ex) {
+    //     console.log(JSON.stringify(ex));
+    //     throw new Error('Server identity does not exists, make sure to enroll it or seed data');
+    // }
 }
 
 const contextPath = join(keyStore + '/' + identityName);
