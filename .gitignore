@@ -1,0 +1,6 @@
+compliance/node_modules/
+compliance/packages/server/dist
+dist/
+.history/
+node_modules/
+compliance/chaincode-*/

@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json({ limit: '40mb' }));
-app.use('/upload',PaymentcomplianceExpressController);
+app.use('/upload', PaymentcomplianceExpressController);
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
